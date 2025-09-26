@@ -26,7 +26,7 @@ namespace Assignment2
         }
         private void radColor_CheckedChanged(object sender, EventArgs e)
         {
-            switch(color)
+            switch (color)
             {
                 case 1:
                     color = (int)Colors.Red;
@@ -45,28 +45,6 @@ namespace Assignment2
                     lblSummary.Text = "Please select a color.";
                     break;
             }
-        }
-
-        private void chkFeatures_CheckedChanged(object sender, EventArgs e)
-        {
-            features = "with the following features: ";
-            if (chkAC.Checked)
-            {
-                features += "AC, ";
-            }
-            if (chkPowerWindows.Checked)
-            {
-                features += "Power Windows, ";
-            }
-            if (chkSyriusRadio.Checked)
-            {
-                features += "Syrius Radio, ";
-            }
-            if (chkLaneAssist.Checked)
-            {
-                features += "Lane Assist, ";
-            }
-            lblSummary.Text = features.TrimEnd(' ', ',');
         }
 
         private void btnPurchase_Click(object sender, EventArgs e)
@@ -91,6 +69,25 @@ namespace Assignment2
                 lblSummary.Text = "Please enter a valid year.";
                 return;
             }
+            features = "with the following features: ";
+            if (chkAC.Checked)
+            {
+                features += "AC, ";
+            }
+            if (chkPowerWindows.Checked)
+            {
+                features += "Power Windows, ";
+            }
+            if (chkSyriusRadio.Checked)
+            {
+                features += "Syrius Radio, ";
+            }
+            if (chkLaneAssist.Checked)
+            {
+                features += "Lane Assist, ";
+            }
+            lblSummary.Text = features.TrimEnd(' ', ',');
+            lblSummary.ForeColor = Color.Black;
             lblSummary.Text = $"You have purchased a {year} {selectedModel} {features}";
         }
 

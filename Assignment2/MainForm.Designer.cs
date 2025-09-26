@@ -203,6 +203,7 @@
             btnPurchase.TabIndex = 10;
             btnPurchase.Text = "&Purchase";
             btnPurchase.UseVisualStyleBackColor = true;
+            btnPurchase.Click += this.btnPurchase_Click;
             // 
             // lblSummary
             // 
