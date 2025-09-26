@@ -38,10 +38,10 @@
             radWhite = new RadioButton();
             grpColors = new GroupBox();
             grpFeatures = new GroupBox();
-            radAC = new CheckBox();
-            radPowerWindows = new CheckBox();
-            radSyriusRadio = new CheckBox();
-            radLaneAssist = new CheckBox();
+            chkLaneAssist = new CheckBox();
+            chkSyriusRadio = new CheckBox();
+            chkPowerWindows = new CheckBox();
+            chkAC = new CheckBox();
             btnPurchase = new Button();
             lblSummary = new Label();
             grpColors.SuspendLayout();
@@ -144,10 +144,10 @@
             // 
             // grpFeatures
             // 
-            grpFeatures.Controls.Add(radLaneAssist);
-            grpFeatures.Controls.Add(radSyriusRadio);
-            grpFeatures.Controls.Add(radPowerWindows);
-            grpFeatures.Controls.Add(radAC);
+            grpFeatures.Controls.Add(chkLaneAssist);
+            grpFeatures.Controls.Add(chkSyriusRadio);
+            grpFeatures.Controls.Add(chkPowerWindows);
+            grpFeatures.Controls.Add(chkAC);
             grpFeatures.Location = new Point(766, 32);
             grpFeatures.Name = "grpFeatures";
             grpFeatures.Size = new Size(192, 198);
@@ -155,45 +155,45 @@
             grpFeatures.TabStop = false;
             grpFeatures.Text = "&Features";
             // 
-            // radAC
+            // chkLaneAssist
             // 
-            radAC.AutoSize = true;
-            radAC.Location = new Point(21, 47);
-            radAC.Name = "radAC";
-            radAC.Size = new Size(61, 29);
-            radAC.TabIndex = 0;
-            radAC.Text = "AC";
-            radAC.UseVisualStyleBackColor = true;
+            chkLaneAssist.AutoSize = true;
+            chkLaneAssist.Location = new Point(21, 152);
+            chkLaneAssist.Name = "chkLaneAssist";
+            chkLaneAssist.Size = new Size(125, 29);
+            chkLaneAssist.TabIndex = 3;
+            chkLaneAssist.Text = "Lane Assist";
+            chkLaneAssist.UseVisualStyleBackColor = true;
             // 
-            // radPowerWindows
+            // chkSyriusRadio
             // 
-            radPowerWindows.AutoSize = true;
-            radPowerWindows.Location = new Point(21, 82);
-            radPowerWindows.Name = "radPowerWindows";
-            radPowerWindows.Size = new Size(165, 29);
-            radPowerWindows.TabIndex = 1;
-            radPowerWindows.Text = "Power Windows";
-            radPowerWindows.UseVisualStyleBackColor = true;
+            chkSyriusRadio.AutoSize = true;
+            chkSyriusRadio.Location = new Point(21, 117);
+            chkSyriusRadio.Name = "chkSyriusRadio";
+            chkSyriusRadio.Size = new Size(135, 29);
+            chkSyriusRadio.TabIndex = 2;
+            chkSyriusRadio.Text = "Syrius Radio";
+            chkSyriusRadio.UseVisualStyleBackColor = true;
             // 
-            // radSyriusRadio
+            // chkPowerWindows
             // 
-            radSyriusRadio.AutoSize = true;
-            radSyriusRadio.Location = new Point(21, 117);
-            radSyriusRadio.Name = "radSyriusRadio";
-            radSyriusRadio.Size = new Size(135, 29);
-            radSyriusRadio.TabIndex = 2;
-            radSyriusRadio.Text = "Syrius Radio";
-            radSyriusRadio.UseVisualStyleBackColor = true;
+            chkPowerWindows.AutoSize = true;
+            chkPowerWindows.Location = new Point(21, 82);
+            chkPowerWindows.Name = "chkPowerWindows";
+            chkPowerWindows.Size = new Size(165, 29);
+            chkPowerWindows.TabIndex = 1;
+            chkPowerWindows.Text = "Power Windows";
+            chkPowerWindows.UseVisualStyleBackColor = true;
             // 
-            // radLaneAssist
+            // chkAC
             // 
-            radLaneAssist.AutoSize = true;
-            radLaneAssist.Location = new Point(21, 152);
-            radLaneAssist.Name = "radLaneAssist";
-            radLaneAssist.Size = new Size(125, 29);
-            radLaneAssist.TabIndex = 3;
-            radLaneAssist.Text = "Lane Assist";
-            radLaneAssist.UseVisualStyleBackColor = true;
+            chkAC.AutoSize = true;
+            chkAC.Location = new Point(21, 47);
+            chkAC.Name = "chkAC";
+            chkAC.Size = new Size(61, 29);
+            chkAC.TabIndex = 0;
+            chkAC.Text = "AC";
+            chkAC.UseVisualStyleBackColor = true;
             // 
             // btnPurchase
             // 
@@ -207,6 +207,7 @@
             // lblSummary
             // 
             lblSummary.BorderStyle = BorderStyle.FixedSingle;
+            lblSummary.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblSummary.Location = new Point(350, 403);
             lblSummary.Name = "lblSummary";
             lblSummary.Size = new Size(608, 114);
@@ -248,10 +249,10 @@
         private RadioButton radWhite;
         private GroupBox grpColors;
         private GroupBox grpFeatures;
-        private CheckBox radLaneAssist;
-        private CheckBox radSyriusRadio;
-        private CheckBox radPowerWindows;
-        private CheckBox radAC;
+        private CheckBox chkLaneAssist;
+        private CheckBox chkSyriusRadio;
+        private CheckBox chkPowerWindows;
+        private CheckBox chkAC;
         private Button btnPurchase;
         private Label lblSummary;
     }
