@@ -89,7 +89,7 @@
             radRed.Location = new Point(29, 47);
             radRed.Name = "radRed";
             radRed.Size = new Size(67, 29);
-            radRed.TabIndex = 4;
+            radRed.TabIndex = 5;
             radRed.TabStop = true;
             radRed.Text = "Red";
             radRed.UseVisualStyleBackColor = true;
@@ -100,7 +100,7 @@
             radBlue.Location = new Point(29, 81);
             radBlue.Name = "radBlue";
             radBlue.Size = new Size(70, 29);
-            radBlue.TabIndex = 5;
+            radBlue.TabIndex = 6;
             radBlue.TabStop = true;
             radBlue.Text = "Blue";
             radBlue.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@
             radBlack.Location = new Point(29, 117);
             radBlack.Name = "radBlack";
             radBlack.Size = new Size(77, 29);
-            radBlack.TabIndex = 6;
+            radBlack.TabIndex = 7;
             radBlack.TabStop = true;
             radBlack.Text = "Black";
             radBlack.UseVisualStyleBackColor = true;
@@ -122,7 +122,7 @@
             radWhite.Location = new Point(29, 151);
             radWhite.Name = "radWhite";
             radWhite.Size = new Size(83, 29);
-            radWhite.TabIndex = 7;
+            radWhite.TabIndex = 8;
             radWhite.TabStop = true;
             radWhite.Text = "White";
             radWhite.UseVisualStyleBackColor = true;
@@ -136,7 +136,7 @@
             grpColors.Location = new Point(494, 32);
             grpColors.Name = "grpColors";
             grpColors.Size = new Size(192, 198);
-            grpColors.TabIndex = 8;
+            grpColors.TabIndex = 4;
             grpColors.TabStop = false;
             grpColors.Text = "&Color";
             // 
@@ -159,7 +159,7 @@
             chkLaneAssist.Location = new Point(21, 152);
             chkLaneAssist.Name = "chkLaneAssist";
             chkLaneAssist.Size = new Size(125, 29);
-            chkLaneAssist.TabIndex = 3;
+            chkLaneAssist.TabIndex = 13;
             chkLaneAssist.Text = "Lane Assist";
             chkLaneAssist.UseVisualStyleBackColor = true;
             // 
@@ -169,7 +169,7 @@
             chkSyriusRadio.Location = new Point(21, 117);
             chkSyriusRadio.Name = "chkSyriusRadio";
             chkSyriusRadio.Size = new Size(135, 29);
-            chkSyriusRadio.TabIndex = 2;
+            chkSyriusRadio.TabIndex = 12;
             chkSyriusRadio.Text = "Syrius Radio";
             chkSyriusRadio.UseVisualStyleBackColor = true;
             // 
@@ -179,7 +179,7 @@
             chkPowerWindows.Location = new Point(21, 82);
             chkPowerWindows.Name = "chkPowerWindows";
             chkPowerWindows.Size = new Size(165, 29);
-            chkPowerWindows.TabIndex = 1;
+            chkPowerWindows.TabIndex = 11;
             chkPowerWindows.Text = "Power Windows";
             chkPowerWindows.UseVisualStyleBackColor = true;
             // 
@@ -189,7 +189,7 @@
             chkAC.Location = new Point(21, 47);
             chkAC.Name = "chkAC";
             chkAC.Size = new Size(61, 29);
-            chkAC.TabIndex = 0;
+            chkAC.TabIndex = 10;
             chkAC.Text = "AC";
             chkAC.UseVisualStyleBackColor = true;
             // 
@@ -198,10 +198,10 @@
             btnPurchase.Location = new Point(118, 421);
             btnPurchase.Name = "btnPurchase";
             btnPurchase.Size = new Size(112, 34);
-            btnPurchase.TabIndex = 10;
+            btnPurchase.TabIndex = 14;
             btnPurchase.Text = "&Purchase";
             btnPurchase.UseVisualStyleBackColor = true;
-            btnPurchase.Click += this.btnPurchase_Click;
+            btnPurchase.Click += btnPurchase_Click;
             // 
             // lblSummary
             // 
@@ -210,7 +210,7 @@
             lblSummary.Location = new Point(350, 403);
             lblSummary.Name = "lblSummary";
             lblSummary.Size = new Size(608, 114);
-            lblSummary.TabIndex = 11;
+            lblSummary.TabIndex = 15;
             lblSummary.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // MainForm
