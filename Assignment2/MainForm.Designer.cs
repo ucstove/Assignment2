@@ -66,7 +66,6 @@
             lstModels.Name = "lstModels";
             lstModels.Size = new Size(180, 129);
             lstModels.TabIndex = 1;
-            lstModels.SelectedIndexChanged += lstModels_SelectedIndexChanged;
             // 
             // lblYear
             // 
@@ -83,7 +82,6 @@
             txtYear.Name = "txtYear";
             txtYear.Size = new Size(150, 31);
             txtYear.TabIndex = 3;
-            txtYear.TextChanged += txtYear_TextChanged;
             // 
             // radRed
             // 

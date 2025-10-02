@@ -1,51 +1,22 @@
+using System.Drawing.Text;
+using System.Security.Cryptography.X509Certificates;
+
 namespace Assignment2
 {
     public partial class MainForm : Form
     {
         string selectedModel, yearst, features;
-        int year, color;
-        
+        int year;
+
         public MainForm()
         {
             InitializeComponent();
         }
-
-        private void txtYear_TextChanged(object sender, EventArgs e)
-        {
-            yearst = txtYear.Text;
-        }
-
-        private void lstModels_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            selectedModel = lstModels.SelectedItem.ToString();
-        }
-
         private enum Colors
         {
-            Red = 1, Blue = 2, Black = 3, White = 4
+            red, blue, black, white
         }
-        private void radColor_CheckedChanged(object sender, EventArgs e)
-        {
-            switch (color)
-            {
-                case 1:
-                    color = (int)Colors.Red;
-                    break;
-                case 2:
-                    color = (int)Colors.Blue;
-                    break;
-                case 3:
-                    color = (int)Colors.Black;
-                    break;
-                case 4:
-                    color = (int)Colors.White;
-                    break;
-                default:
-                    lblSummary.ForeColor = Color.Red;
-                    lblSummary.Text = "Please select a color.";
-                    break;
-            }
-        }
+        private Colors currentColor;
 
         private void btnPurchase_Click(object sender, EventArgs e)
         {
@@ -59,6 +30,7 @@ namespace Assignment2
                 lblSummary.Text = "Please select a car model.";
                 return;
             }
+
             if (int.TryParse(txtYear.Text, out year))
             {
                 year = int.Parse(txtYear.Text);
@@ -69,26 +41,57 @@ namespace Assignment2
                 lblSummary.Text = "Please enter a valid year.";
                 return;
             }
-            features = "with the following features: ";
-            if (chkAC.Checked)
+
+            if (radRed.Checked)
             {
-                features += "AC, ";
+                currentColor = Colors.red;
             }
-            if (chkPowerWindows.Checked)
+            else if (radBlue.Checked)
             {
-                features += "Power Windows, ";
+                currentColor = Colors.blue;
             }
-            if (chkSyriusRadio.Checked)
+            else if (radBlack.Checked)
             {
-                features += "Syrius Radio, ";
+                currentColor = Colors.black;
             }
-            if (chkLaneAssist.Checked)
+            else if (radWhite.Checked)
             {
-                features += "Lane Assist, ";
+                currentColor = Colors.white;
             }
-            lblSummary.Text = features.TrimEnd(' ', ',');
-            lblSummary.ForeColor = Color.Black;
-            lblSummary.Text = $"You have purchased a {year} {selectedModel} {features}";
+            else
+            {
+                lblSummary.ForeColor = Color.Red;
+                lblSummary.Text = "Please select a color.";
+                return;
+            }
+
+            if (grpFeatures.Controls.OfType<CheckBox>().Any(c => c.Checked))
+            {
+                features = "with the following features: ";
+                if (chkAC.Checked)
+                {
+                    features += "AC, ";
+                }
+                if (chkPowerWindows.Checked)
+                {
+                    features += "Power Windows, ";
+                }
+                if (chkSyriusRadio.Checked)
+                {
+                    features += "Syrius Radio, ";
+                }
+                if (chkLaneAssist.Checked)
+                {
+                    features += "Lane Assist, ";
+                }
+                features = features.TrimEnd(',', ' ');
+            }
+            else
+            {
+                features = "";
+                lblSummary.ForeColor = Color.Black;
+            }
+            lblSummary.Text = $"You have purchased a {currentColor} {year} {selectedModel} {features}";
         }
 
 
