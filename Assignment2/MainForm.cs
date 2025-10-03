@@ -42,27 +42,28 @@ namespace Assignment2
                 return;
             }
 
-            if (radRed.Checked)
+            switch (true)
             {
-                currentColor = Colors.red;
-            }
-            else if (radBlue.Checked)
-            {
-                currentColor = Colors.blue;
-            }
-            else if (radBlack.Checked)
-            {
-                currentColor = Colors.black;
-            }
-            else if (radWhite.Checked)
-            {
-                currentColor = Colors.white;
-            }
-            else
-            {
-                lblSummary.ForeColor = Color.Red;
-                lblSummary.Text = "Please select a color.";
-                return;
+                case true when radRed.Checked:
+                    currentColor = Colors.red;
+                    break;
+
+                case true when radBlue.Checked:
+                    currentColor = Colors.blue;
+                    break;
+
+                case true when radBlack.Checked:
+                    currentColor = Colors.black;
+                    break;
+
+                case true when radWhite.Checked:
+                    currentColor = Colors.white;
+                    break;
+
+                default:
+                    lblSummary.ForeColor = Color.Red;
+                    lblSummary.Text = "Please select a color.";
+                    return;
             }
 
             if (grpFeatures.Controls.OfType<CheckBox>().Any(c => c.Checked))
@@ -89,8 +90,8 @@ namespace Assignment2
             else
             {
                 features = "";
-                lblSummary.ForeColor = Color.Black;
             }
+            lblSummary.ForeColor = Color.Black;
             lblSummary.Text = $"You have purchased a {currentColor} {year} {selectedModel} {features}";
         }
 
